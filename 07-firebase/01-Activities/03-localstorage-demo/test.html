@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Local Storage Example</title>
+
+  </head>
+
+  <style>
+    /* #input-name, #greeting {
+      font-weight: 700;
+      font-size: 2em;
+    } */
+  </style>
+  <body>
+
+    <h1>Guest Book</h1>
+
+    <span id ="input-name">First name: 
+        <input id = "inputname" type="text">
+        <input id ="submitbtn" type ="submit" value = "Submit">
+    </span>
+
+    <div id="greeting"></div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script>
+
+    $("#submitbtn").on("click", function(event) {
+        event.preventDefault();
+        $("#greeting").html("");
+        var inputvalue = $("#inputname").val().trim();
+        localStorage.setItem("name", inputvalue);
+        $("#greeting").text(localStorage.getItem("name"));
+    });
+
+        $("#greeting").text(localStorage.getItem("name"));
+
+    </script>
+
+</body>
+
+</html>

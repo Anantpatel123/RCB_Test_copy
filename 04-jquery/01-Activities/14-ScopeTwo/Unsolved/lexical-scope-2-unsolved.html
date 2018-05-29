@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure</title>
+</head>
+<body>
+  <h2>Check console to see the madness!</h2>
+
+  <script>
+    var cat = {
+      name: "Gus",
+      color: "gray",
+      age: 15,
+
+      printInfo: function() {
+        console.log("inside printInfo()");
+
+        // What will this print?
+        console.log(this);// cat object
+
+        // What will this print?
+        console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);//Gus gray 15
+
+        var nestedFunction = function() {
+          console.log("inside nestedFunction()");
+
+          // What will this print?
+          console.log(this);// window
+
+          // What will this print?
+          console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);//undefined
+        };
+
+        nestedFunction();
+      }
+    };
+
+    // calls the printInfo function. Which subsequently calls the nestedFunction()
+    //cat.printInfo();
+    console.log("YESsssssssss CAT"); //running the code. same as line 40.
+
+    var newFunction1 = cat.printInfo(); //execute the code only & return value because ().
+    var newFunction2 = cat.printInfo;// execute the code & save the value inside function2.
+
+    console.log("NOoooooooooo CAT");
+    newFunction2();// will return window cause cat is not calling newfunction2.
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "ice-cream-crud",
+  "version": "1.0.0",
+  "description": "* It's time to start making our playlist application a little more functional through including all four C.R.U.D elements within it.",
+  "main": "iceCreamCRUD.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {}
+}

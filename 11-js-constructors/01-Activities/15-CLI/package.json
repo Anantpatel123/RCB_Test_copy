@@ -1,0 +1,16 @@
+{
+  "name": "15-CLI",
+  "version": "1.0.0",
+  "description": "* Implement the logic for the CLI component. Refer to the architectural diagram for help.",
+  "main": "CLI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.22.0",
+    "weather-js": "^2.0.0"
+  }
+}

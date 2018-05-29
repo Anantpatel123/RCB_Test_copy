@@ -1,0 +1,15 @@
+{
+  "name": "14-weatheradmin",
+  "version": "1.0.0",
+  "description": "* Implement the logic for the `WeatherAdmin` component. As with the `UserSearch` component, you should start with pseudocode.",
+  "main": "UserSearch.js",
+  "dependencies": {
+    "weather.js": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

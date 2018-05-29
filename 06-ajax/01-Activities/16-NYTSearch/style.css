@@ -1,0 +1,49 @@
+.jumbotron {
+    text-align: center;
+    color: white;
+    background-color: #0f3168;
+  }
+  
+  #searchBox .panel-heading {
+    background-color: #0f3168;
+    color: white;
+  }
+  
+  #searchBox .input-group-addon {
+    background-color: #0f3168;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #searchBox {
+    border: 3px solid #0f3168;
+    border-radius: 10px;
+  }
+  
+  #articlesHeading .panel-heading {
+    background-color: #0f3168;
+    color: white;
+  }
+  
+  #articlesHeading {
+    border: 3px solid #0f3168;
+    border-radius: 10px;
+  }
+  
+  .btn-primary {
+    height: 50px;
+    width: 125px;
+  }
+  
+  #searchBox .input-group-addon,
+  #searchBox .form-control {
+    height: 48px;
+  }
+  
+  .panel-title {
+    height: 30px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  

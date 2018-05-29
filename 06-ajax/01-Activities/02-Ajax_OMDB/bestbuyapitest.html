@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Single AJAX</title>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+    var apikey = "lHzfxhG8ouWxpRucN0nkcCCa";
+    var limits = "20";
+
+    var categoryID = "pcmcat209400050001";
+    var title = "samsung galaxy s9"; 
+    var revtitle = title.replace(" ","&search=");
+    // for title "samsung galaxy s9" code = (search=samsung&search=galaxy&search=s9)
+
+    var queryURL = "https://api.bestbuy.com/v1/products((search=" + revtitle + ")&(categoryPath.id="+ categoryID + "))?apiKey=" + apikey +
+    "&pageSize=" + limits + "&format=json";
+
+      $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+
+        // console.log(response);
+
+      //for loop if items = 1, 5 or 10.      
+      for (var i = 0; i < limits; i++) {       
+
+      //add features or description????
+      
+      console.log("URL: ", response.products[i].url);
+      console.log("Brand: ", response.products[i].manufacturer);
+      console.log("Model #: ", response.products[i].modelNumber);
+      console.log("Item name: ", response.products[i].name);
+      console.log("UPC: ", response.products[i].upc);
+      console.log("SKU #: ", response.products[i].sku);
+      console.log("Color: ", response.products[i].color);
+      console.log("Rg price$: ", response.products[i].regularPrice);
+      console.log("Sale price$: ", response.products[i].salePrice);
+
+      console.log("reg image: ", response.products[i].image);
+      console.log("medium image: ", response.products[i].mediumImage);
+      console.log("thumbnail image: ", response.products[i].thumbnailImage);
+           
+      }
+    });
+    
+  </script>
+
+</body>
+
+</html>
